@@ -1,0 +1,8 @@
+{
+  "node": true,
+  "newcap": false,
+  "eqeqeq": true,
+  "strict": true,
+  "freeze": true,
+  "undef": true
+}

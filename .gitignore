@@ -1,3 +1,4 @@
 node_modules
 .npm
 test/tmp
+.DS_Store

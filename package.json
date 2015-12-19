@@ -1,0 +1,49 @@
+{
+  "name": "easyb",
+  "version": "0.1.0",
+  "description": "The low investment build system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littleloops/easyb.git"
+  },
+  "keywords": [
+    "build",
+    "make"
+  ],
+  "files": [
+    "index.js",
+    "lib",
+    "bin"
+  ],
+  "bin": {
+    "easyb": "./bin/easyb.js"
+  },
+  "author": "Dylan McDiarmid <dylan@littleloops.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/littleloops/easyb/issues"
+  },
+  "homepage": "https://github.com/littleloops/easyb#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "lodash": "^3.10.1",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "semver": "^5.1.0",
+    "tildify": "^1.1.2"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chokidar": "^1.4.1",
+    "docco": "^0.7.0",
+    "glob": "^6.0.1",
+    "jscs": "^2.7.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.3.4",
+    "rimraf": "^2.4.4"
+  }
+}
