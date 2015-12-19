@@ -67,6 +67,8 @@ function maybeHalt() {
 //
 // `easyb#trigger` is the public interface to this function.
 function runTask(taskName, initialOptions) {
+  // Prevent from exiting on long running asynchronous tasks.
+  process.stdin.resume();
   var task = tasks[taskName];
   var currentStep = 0;
   if (!task) {
