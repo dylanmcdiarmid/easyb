@@ -67,7 +67,6 @@ function maybeHalt() {
 //
 // `easyb#trigger` is the public interface to this function.
 function runTask(taskName, initialOptions) {
-  // Prevent from exiting on long running asynchronous tasks.
   var task = tasks[taskName];
   var currentStep = 0;
   if (!task) {
@@ -122,7 +121,8 @@ function runTask(taskName, initialOptions) {
       return null;
     }
     currentStep += 1;
-    // This block tries to run the step, and
+    // This block tries to run the step, and passes it to a funciton that will
+    // bubble the errors if it throws.
     try {
       step.getRunFn()(next, options);
     } catch (e) {
@@ -169,7 +169,7 @@ function taskEnding() {
 
 // Will exit if their are no tasks still running
 function maybeExit() {
-  if (tasksRunning > 1) {
+  if (tasksRunning > 0) {
     return null;
   }
   if (exitFn) {
