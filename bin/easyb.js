@@ -111,4 +111,7 @@ for (var k in argv) {
   options.argv[k] = argv[k];
 }
 
+// Prevent easyb from exiting prematurely
+process.stdin.resume();
+
 localEasyb.start(configPath, options);
